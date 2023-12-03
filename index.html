@@ -37,12 +37,10 @@
     var introGif = document.getElementById("introGif");
     var bossFightSection = document.getElementById("bossFight");
 
-    introGif.addEventListener("load", function() {
-      setTimeout(function() {
-        introGif.style.display = "none";
-        bossFightSection.style.display = "block";
-      }, introGif.duration * 1000);
-    });
+    setTimeout(function() {
+      introGif.style.display = "none";
+      bossFightSection.style.display = "block";
+    }, 9533.333); // Adjust the time in milliseconds as needed (5 seconds in this example)
 
     function startBossFight() {
       alert("Boss Fight Started!");
