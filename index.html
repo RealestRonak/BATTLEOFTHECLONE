@@ -24,10 +24,7 @@
 </style>
 
 <body>
-<audio autoplay >
-  <source src="intro.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
+
 <img id="introGif" src="intro.gif" alt="Intro GIF">
 
 <div id="bossFight">
@@ -44,11 +41,12 @@ Your browser does not support the audio element.
       setTimeout(function() {
         introGif.style.display = "none";
         bossFightSection.style.display = "block";
-      }, 9000); // Adjust the time in milliseconds as needed
+      }, 9533.333); // Adjust the time in milliseconds as needed
     };
 
     function startBossFight() {
-      alert("Boss Fight Started!");
+      introGif.style.display = "block";  // Show the GIF again if needed
+      introGif.play();  // Play the GIF
       // Add additional logic for the boss fight here
     }
   });
