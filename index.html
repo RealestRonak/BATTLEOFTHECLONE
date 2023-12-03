@@ -25,6 +25,11 @@
 
 <body>
 
+<audio id="introAudio" autoplay>
+  <source src="intro.mp3" type="audio/mp3">
+  Your browser does not support the audio tag.
+</audio>
+
 <img id="introGif" src="intro.gif" alt="Intro GIF">
 
 <div id="bossFight">
@@ -36,17 +41,17 @@
   document.addEventListener("DOMContentLoaded", function() {
     var introGif = document.getElementById("introGif");
     var bossFightSection = document.getElementById("bossFight");
+    var introAudio = document.getElementById("introAudio");
 
-    introGif.onload = function() {
+    introAudio.addEventListener("ended", function() {
       setTimeout(function() {
         introGif.style.display = "none";
         bossFightSection.style.display = "block";
-      }, 9533.333); // Adjust the time in milliseconds as needed
-    };
+      }, 9000);
+    });
 
     function startBossFight() {
-      introGif.style.display = "block";  // Show the GIF again if needed
-      introGif.play();  // Play the GIF
+      alert("Boss Fight Started!");
       // Add additional logic for the boss fight here
     }
   });
