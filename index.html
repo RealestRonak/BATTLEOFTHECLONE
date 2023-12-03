@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <style>
   body, html {
@@ -33,20 +33,22 @@
 </div>
 
 <script>
-  var introGif = document.getElementById("introGif");
-  var bossFightSection = document.getElementById("bossFight");
+  document.addEventListener("DOMContentLoaded", function() {
+    var introGif = document.getElementById("introGif");
+    var bossFightSection = document.getElementById("bossFight");
 
-  introGif.addEventListener("load", function() {
-    setTimeout(function() {
-      introGif.style.display = "none";
-      bossFightSection.style.display = "block";
-    }, introGif.duration * 1000); // Hide after the duration of the GIF in milliseconds
+    introGif.addEventListener("load", function() {
+      setTimeout(function() {
+        introGif.style.display = "none";
+        bossFightSection.style.display = "block";
+      }, introGif.duration * 1000);
+    });
+
+    function startBossFight() {
+      alert("Boss Fight Started!");
+      // Add additional logic for the boss fight here
+    }
   });
-
-  function startBossFight() {
-    // Your boss fight logic goes here
-    alert("Boss Fight Started!");
-  }
 </script>
 
 </body>
